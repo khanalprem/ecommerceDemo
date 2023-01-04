@@ -1,0 +1,167 @@
+nav{
+    position: relative;
+    ul{
+        column-gap: 2rem;
+        
+        li{
+            a{
+                transition: color .5s;
+                display: block;
+                @include breakpoint-up("lg-tab"){
+                    padding:1.5rem 0;
+                  }
+               
+            }
+            .megaMenu{
+                position: absolute;
+                left:0;
+                right:0;
+                top:130%;
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease-in-out,opacity .3s ease-in-out;
+                height: 0;
+                &-wrap{
+                  padding:3.5rem;
+                  background-color: var(--clr-white);
+                  display: flex;
+                  flex-flow:column wrap;
+                  max-width: 1290px;
+                  width: 100%;
+                  margin:0 auto;
+                  @include breakpoint-down('md-tab'){
+                    .grid-item{
+                      margin-bottom: 1.5rem;
+                    }
+                  }
+                  
+                  @include breakpoint-up('md-tab'){
+                    flex-flow:row nowrap;
+                    .grid-item{
+                      &:first-child,&:last-child{
+                        flex:0 0 22%;
+                        max-width: 22%;
+                        width: 100%;
+                      }
+                      &:nth-child(2){
+                        flex:0 0 50%;
+                        max-width: 50%;
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+                li{
+                  a{
+                    padding:.5rem 0;
+                    &::after{
+                      display: none
+                    }
+                  }
+                }
+                &-videos{
+                    --minWidth:120px;
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, minmax(var(--minWidth), 1fr));
+                  column-gap: 2rem;
+                  @include breakpoint-up('xl-tab'){
+                    max-width: 500px;
+                    --minWidth:140px;
+                  }
+                  
+                  li{
+                    margin-top:1rem;
+                  }
+                }
+                
+              
+              }
+            &.is-active{
+                a{
+                    // background-color: var(--clr-primary-500);
+                    // color:var(--clr-white-900);
+                }
+                
+            }
+            &:hover{
+                .megaMenu{
+                  visibility: visible;
+                  opacity: 1;
+                  height: 100%;
+                  top:100%;
+                }
+              }
+        }
+    }
+}
+
+
+    
+.toggle-menu{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    // background-color: var(--clr-white-900);
+    border-radius: 8px;
+    
+    
+    svg{
+        height: 1.5rem;
+        width: 1.5rem;
+        
+    }
+    @include breakpoint-down("lg-tab"){
+        padding:.45rem .5rem;
+        visibility: visible;
+        opacity: 1;
+        width: auto;
+        height: auto;
+        @include box-shadow(0 2px 6px rgba(0,0,0,.4));
+    }
+    
+}
+.menu{
+    .switch-button{
+        // background-color: var(--clr-white-900);
+        svg{
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+    nav{
+       
+  
+        @include breakpoint-down("lg-tab"){
+            display: none;
+            position: fixed;
+            opacity: 0;
+            visibility: hidden;
+            right:-100%;
+            width: 300px;
+            // background-color: var(--clr-white-900);
+            top:0;
+            height: 100vh;
+            padding:1rem;
+            box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+            // border:1px solid var(--clr-body-300);
+           z-index: 111;
+            
+           
+            
+        }
+    }
+    &_active{
+        nav{
+            @include breakpoint-down("lg-tab"){
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                right:0; 
+            }  
+        }
+    }
+}
+
+

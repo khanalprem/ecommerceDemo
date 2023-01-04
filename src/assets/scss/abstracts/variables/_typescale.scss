@@ -1,0 +1,111 @@
+//@font face
+@font-face {
+  font-family: "Bigola Display";
+  src: url("../../../fonts/BigolaDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cerco Regular";
+  src: url("../../../fonts/Cerco-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cerco Regular Italic";
+  src: url("../../../fonts/Cerco-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cerco Medium";
+  src: url("../../../fonts/Cerco-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cerco Medium Italic";
+  src: url("../../../fonts/Cerco-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+}
+
+//Toothpillow font family and size setting
+:root {
+  --base-fs: 16;
+
+  //font family
+
+  --ff-body: "Cerco Regular", sans-serif;
+  --ff-body_italic: "Cerco Regular Italic", sans-serif;
+  --ff-medium: "Cerco Medium", sans-serif;
+  --ff-medium_italic: "Cerco Medium Italic", sans-serif;
+  --ff-heading: "Bigola Display", sans-serif;
+
+  //font size
+  --fs-sm: calc((12 / var(--base-fs) * 1rem));
+  --fs-body: calc((14 / var(--base-fs) * 1rem));
+  --fs-lg: calc((16 / var(--base-fs) * 1rem));
+  --fs-h5: calc((13 / var(--base-fs) * 1rem));
+  --fs-h4: calc((18 / var(--base-fs) * 1rem));
+  --fs-h3: calc((22 / var(--base-fs) * 1rem));
+  --fs-h2: calc((40 / var(--base-fs) * 1rem));
+  --fs-h1: calc((55 / var(--base-fs) * 1rem));
+}
+body {
+  font-family: var(--ff-body);
+  position: relative;
+  font-size: var(--fs-body);
+  line-height: 1.714;
+  font-weight: normal;
+  color:var(--clr-body)
+}
+
+.fs-sm {
+  font-size: var(--fs-sm);
+  line-height: 1.2;
+}
+.fs-lg {
+  font-size: var(--fs-lg);
+}
+h5,
+.fs-h5 {
+  font-size: var(--fs-h5);
+  line-height: 1.15;
+  text-transform: uppercase;
+  font-family: var(--ff-medium);
+}
+h4,
+.fs-h4 {
+  font-size: var(--fs-h4);
+  line-height: 1.5;
+}
+h3,
+.fs-h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.3125;
+}
+.fs-h2,h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--ff-heading);
+  line-height: 1.3125;
+}
+h1,
+.fs-h1 {
+  font-size: var(--fs-h1);
+  font-family: var(--ff-heading);
+  line-height: 1.1;
+}

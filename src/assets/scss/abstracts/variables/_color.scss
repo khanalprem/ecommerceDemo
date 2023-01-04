@@ -1,0 +1,48 @@
+//Toothpillow color setting
+$body: #323232;
+$blue: #B6CAE3;
+$blue-dark:#99B4D7;
+$blue-light: #dee6ee;
+$blue-400:#D6E0ED;
+$purple:#E8DBE7;
+$purple-dark: #a870a4;
+$purple-light: #d7bcd7;
+$green: #8cd1c8;
+$green-light:#D3E4E2;
+$cream: #f8f3ea;
+$pink: #eaadca;
+$pich: #f4cdc6;
+$pich-light: #f8f4ed;
+$yellow: #f6c26d;
+$white: #fff;
+$bg:#FCFCFA;
+$bg-light:#EFEFEF;
+
+:root {
+  --clr-body: #{$body};
+  --clr-blue: #{$blue};
+  --clr-blue-light: #{$blue-light};
+  --clr-blue-dark:#{$blue-dark};
+  --clr-blue-400:#{$blue-400};
+  --clr-purple:#{$purple};
+  --clr-purple-dark: #{$purple-dark};
+  --clr-purple-light: #{$purple-light};
+  --clr-green: #{$green};
+  --clr-green-light:#{$green-light};
+  --clr-cream: #{$cream};
+  --clr-pink: #{$pink};
+  --clr-pich: #{$pich};
+  --clr-pich-light: #{$pich-light};
+  --clr-yellow: #{$yellow};
+  --clr-white: #{$white};
+  --clr-bg:#{$bg};
+  --clr-bg-light:#{$bg-light};
+}
+
+//for dark and light theme
+
+// :root[data-theme="light"] {
+// }
+
+// :root[data-theme="light"] {
+// }

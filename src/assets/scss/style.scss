@@ -1,0 +1,36 @@
+/*
+Template Name: Toothpillow;
+Template URI:
+Author: Prem Prasad Khanal
+Author URI: http://premkhanal.com.np/
+Description: Toothpillow is the first humanitarian digital platform designed for project monitoring and infrastructure quality assurance. 
+Version: 1.0.0
+Primary use: Monitoring system
+*/
+
+@charset 'utf-8';
+
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/* Mixin
+--------------------------------------------- */
+
+@import "mixins/mixins";
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/utility";
+
+/* Layout
+--------------------------------------------- */
+@import "layouts/layout";
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/components";
+
+/* pages
+--------------------------------------------- */
+@import "pages/pages";

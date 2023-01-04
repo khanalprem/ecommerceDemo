@@ -1,0 +1,12 @@
+input,textarea{
+  outline: none;
+  box-shadow: none;
+  border:none;
+  height: calc(1.6em + 0.75rem + 2px);
+  padding: 0.375rem 1rem;
+  background-clip: padding-box;
+  
+  @include input-placeholder {
+    text-transform: capitalize;
+  }
+}

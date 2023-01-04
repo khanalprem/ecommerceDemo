@@ -1,0 +1,68 @@
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+@mixin transitions($time, $type) {
+  -webkit-transition: all $time $type;
+  -moz-transition: all $time $type;
+  -o-transition: all $time $type;
+  -ms-transition: all $time $type;
+  transition: all $time $type;
+}
+
+@mixin transitions-property($property, $time, $type) {
+  -webkit-transition: $property $time $type;
+  -moz-transition: $property $time $type;
+  -o-transition: $property $time $type;
+  -ms-transition: $property $time $type;
+  transition: $property $time $type;
+}
+
+@mixin backface-visibility($type) {
+  -webkit-backface-visibility: $type;
+  -moz-backface-visibility: $type;
+  -o-backface-visibility: $type;
+  -ms-backface-visibility: $type;
+  backface-visibility: $type;
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+@mixin animationKey($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+// Define animation name, and properties
+// @include keyframes(fade-out) {
+//     0% { opacity: 1; }
+//     90% { opacity: 0; }
+// }
+// Add animation to element
+//   .element {
+//     width: 100px;
+//     height: 100px;
+//     background: black;
+//     @include animationKey('fade-out 5s 3');
+//   }

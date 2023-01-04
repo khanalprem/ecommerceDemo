@@ -1,0 +1,47 @@
+button,
+.btn {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  @include transition(all .4s ease-in-out);
+
+  &-primary {
+    background: linear-gradient(
+      89.77deg,
+      #d8bdd7 0.15%,
+      #abc1dd 49.98%,
+      #9bcfc8 99.8%
+    );
+    color: var(--clr-white);
+    border-radius: 100px;
+    &:hover {
+      background: linear-gradient(
+        89.77deg,
+        #9bcfc8 0.15%,
+        #abc1dd 49.98%,
+        #d8bdd7 99.8%
+      );
+    }
+  }
+  &-secondary{
+    border:1px solid var(--clr-body);
+  }
+  &-sm {
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+  }
+  &-blue {
+    background-color: var(--clr-blue);
+    color: var(--clr-white);
+  }
+  &-white {
+    background-color: var(--clr-white);
+  }
+  &:disabled,
+  &-disabled {
+    cursor: not-allowed;
+  }
+}
